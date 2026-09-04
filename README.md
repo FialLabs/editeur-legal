@@ -8,6 +8,21 @@ Dépôt public, séparé de `FialLabs/shared` (privé) parce que `raw.githubuser
 et jsDelivr ne peuvent servir que des dépôts publics. Aucun secret ici : quatre champs
 d'identité publique, vides tant que l'entité n'existe pas.
 
+## À quoi il sert, à quoi il ne sert pas
+
+**Sert** : les pages publiées — HTML statique hébergé (GitHub Pages), qui peut appeler
+un serveur distant et où un champ silencieux quand il est vide ne bloque rien. C'est le
+cas d'une politique de confidentialité.
+
+**Ne sert pas** : un écran d'application. Un écran doit s'afficher hors ligne (`fetch()`
+vers jsDelivr échoue sans réseau) et le silence sur un champ vide ne convient pas à un
+produit avec comptes, où l'absence d'identité éditeur doit se voir, pas se taire.
+
+Calé a ce second besoin et a écrit son propre module, distinct de celui-ci — pages ET
+écrans, hors ligne, refuse de publier si un champ est vide. Deux besoins différents, pas
+un doublon. Un projet d'application tenté d'importer ce fichier-ci pour un écran a
+besoin du module de Calé, pas de celui-ci.
+
 ## Utilisation, depuis n'importe quelle page de politique de confidentialité
 
 ```html

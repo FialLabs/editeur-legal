@@ -4,6 +4,27 @@
 //   <div id="editeur-legal"></div>
 //   <script src="https://cdn.jsdelivr.net/gh/FialLabs/editeur-legal@main/editeur-legal.js"></script>
 //
+// ════ À QUOI IL SERT, À QUOI IL NE SERT PAS ════ (lu ici avant d'être adopté ailleurs)
+//
+// CE MODULE SERT LES PAGES PUBLIÉES — des pages HTML statiques, hébergées en ligne (GitHub
+// Pages), qui peuvent se permettre d'appeler un serveur distant (jsDelivr) et où un champ
+// silencieux quand il est vide ne bloque rien : la page reste lisible et honnête sans lui.
+// C'est le cas d'une politique de confidentialité.
+//
+// IL NE SERT PAS UN ÉCRAN D'APPLICATION, et ce n'est pas un oubli, c'est une limite de
+// conception à ne pas contourner en l'important là où il ne va pas :
+//   - un écran d'application doit s'afficher hors ligne — un `fetch()` vers jsDelivr comme
+//     seule source échoue sans réseau, ce qu'une page web statique peut tolérer et qu'un écran
+//     ne peut pas ;
+//   - le silence quand un champ est vide (voir plus bas) convient à une page qu'on complète
+//     un jour ; il ne convient PAS à un produit avec comptes, où l'absence d'identité éditeur
+//     est une question de conformité qui doit être vue, pas masquée.
+//
+// Calé a ce second besoin — pages ET écrans, hors ligne, refuse de publier si un champ est
+// vide plutôt que de se taire — et a donc écrit son propre module, distinct de celui-ci. Ce
+// n'est pas un doublon : deux besoins différents, deux modules. Si un projet d'application
+// est tenté d'importer CE fichier-ci pour un écran, c'est le signe qu'il lui faut le module de
+// Calé, pas celui-ci.
 // Dépôt public séparé, délibérément : ni raw.githubusercontent.com ni jsDelivr ne peuvent
 // servir un dépôt privé (vérifié en essayant depuis shared/, qui est privé — les deux
 // renvoyaient 404, silencieusement, même en forçant le SHA exact d'un commit qui existait bel
