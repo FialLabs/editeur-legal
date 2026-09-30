@@ -12,10 +12,19 @@ On ne le retouche jamais ici : on relance le générateur, puis on recopie.
 Empreinte (sha256, 12 premiers caractères) : `16ae2ed238d5` — la même que dans
 `fiallabs-assets/Diffusion/courriel/PRODUCTION.md`.
 
-**La signature Gmail pointe sur un commit précis**, pas sur `@main` :
-jsDelivr garde `@main` en cache, un commit épinglé ne change jamais. Remplacer
-ce fichier ne change donc PAS la signature : il faut aussi changer l'adresse
-dans Gmail (Paramètres → Général → Signature).
+**Adresse branchée dans la signature Gmail** (GitHub Pages, activé sur ce dépôt
+le 30/09/2026, branche `main`, racine) :
 
-**Ne pas supprimer ni renommer ce fichier** : chaque mail déjà envoyé l'affiche
-depuis cette adresse.
+    https://fiallabs.github.io/editeur-legal/courriel/fiallabs-pastille-96.png
+
+Vérifiée le 30/09/2026 dans un navigateur : 200, `image/png`, 2 407 octets,
+96 × 96, empreinte identique au tirage.
+
+**CETTE ADRESSE EST LUE PAR CHAQUE MAIL DÉJÀ ENVOYÉ, À CHAQUE OUVERTURE.**
+- Remplacer ce fichier change la pastille **dans tous les mails passés**.
+- Le supprimer, le renommer, renommer ce dépôt, le passer en privé ou
+  désactiver Pages casse la signature **dans tous les mails passés**.
+
+Une nouvelle pastille va donc à une **nouvelle adresse** (un autre nom de
+fichier), puis on change l'adresse dans Gmail (Paramètres → Général →
+Signature). L'ancien fichier reste en place.

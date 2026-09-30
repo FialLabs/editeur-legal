@@ -33,3 +33,10 @@ besoin du module de Calé, pas de celui-ci.
 Tant que `editeur-legal.json` est vide, la section ne s'affiche pas — jamais de mention
 "à venir". Le jour où l'entité existe : remplir les quatre champs de ce fichier, pousser,
 et toutes les pages qui l'incluent se mettent à jour sans être rouvertes.
+
+## `courriel/` — et pourquoi ce dépôt a GitHub Pages
+
+Depuis le 30/09/2026, ce dépôt porte aussi la pastille de la signature de
+courriel du studio, et GitHub Pages y est activé pour la servir. Lire
+`courriel/LISEZ-MOI.md` avant de toucher à ce dossier : son adresse est lue
+par chaque mail déjà envoyé.
